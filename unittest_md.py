@@ -18,7 +18,7 @@ class MdTests(unittest.TestCase):
         MaxwellBoltzmannDistribution(atoms, temperature_K=300)
         dyn = VelocityVerlet(atoms, 5 * units.fs)
         epot, ekin, temp, etot = calcenergy(atoms)
-        self.assertTrue(round(etot, 3) == 0.038)
+        self.assertEqual(round(etot, 3), 0.038)
 
 if __name__=="__main__":
     tests = [unittest.TestLoader().loadTestsFromTestCase(MdTests)]
