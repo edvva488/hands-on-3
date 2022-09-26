@@ -43,8 +43,6 @@ def run_md():
     def printenergy(a=atoms):  # store a reference to atoms in the definition.
         """Function to print the potential, kinetic and total energy."""
         epot, ekin, temp, etot = calcenergy(a)
-        print(etot)
-        print(round(etot, 3))
         print('Energy per atom: Epot = %.3feV  Ekin = %.3feV (T=%3.0fK)  '
               'Etot = %.3feV' % (epot, ekin, temp, etot))
 
